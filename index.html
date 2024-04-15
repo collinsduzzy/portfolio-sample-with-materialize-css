@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="css/materialize.css">
     <!-- Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Head CSS -->
+    <style>
+
+        div.caption h1,h5 {
+            display: inline-block !important;
+            padding: 25px !important;
+        }
+        div.caption h1:hover,h5:hover {
+            background-color: white !important;
+            color: #0D47A1 !important;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,14 +37,25 @@
             </div>
         </nav>
         <!-- Hero Image/Title -->
-            <img src="img/banner.jpg" alt="" class="responsive-img">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="img/banner.jpg" alt="" class="responsive-img">
+                        <div class="caption center-align">
+                            <h1>Hi there, I'm Collins</h1>
+                            <br>
+                            <h5>I develop websites</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
         <!-- Projects -->
         <section class="" id="projects">
             <div class="container">
-                <h1 class="center-align blue-darken-4">My Projects</h1>
+                <h1 class="center-align blue-text text-darken-4">My Projects</h1>
                 <!-- Projects Row 1 -->
                 <div class="row">
                     <div class="col s12 l4">
@@ -93,6 +116,7 @@
         <section class="black" id="connect" style="padding: 10vh;">
             <div class="container center-align">
                 <h1 class="white-text ">My Social Links</h1>
+                <br><br>
                 <div class="row" id="social-links">
                    <div class="col s6 l2 push-l1">
                     <a href="">
@@ -134,7 +158,10 @@
     <script src="js/materialize.js"></script>
     <script>
         $(document).ready(function(){
-
+            $('.slider').slider({
+                height: 450,
+                indicators: false
+            });
         });
     </script>
 </body>
